@@ -1,0 +1,68 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define Max 50
+ 
+int top = -1, front = 0;
+int stack[Max];
+void push(char);
+void pop();
+ 
+void main()
+{
+    int i, t;
+    char st[Max], b;
+    while (1)
+    {
+        printf("1-enter string\n2-exit\n");
+        printf("enter your choice\n");
+        scanf("%d", &t);
+        switch (t)
+        {
+        case 1:
+            printf("Enter the String\n");
+            scanf("%s", st);
+            for (i = 0;st[i] != '\0';i++)
+            {
+                b = st[i];
+                push(b);
+            }
+            for (i = 0;i < (strlen(st) / 2);i++)
+            {
+                if (stack[top] == stack[front])
+                {
+                    pop();
+                    front++;
+                }
+                else
+                {
+                    printf("%s String given is not a palindrome \n", st);
+                    break; 
+                }
+            }
+            if ((strlen(s) / 2)  =  =  front)
+                printf("%s String given is a palindrome\n",  st);
+            front  =  0;
+            top  =  -1;
+            break;
+        case 2:
+            exit(0);
+        default:
+            printf("enter correct choice\n");
+        }
+    }
+}
+ 
+/* to push a character into stack */
+void push(char a)
+{
+    top++;
+    stack[top]  =  a;
+}
+ 
+/* to delete an element in stack */
+void pop()
+{
+    top--;
+}
