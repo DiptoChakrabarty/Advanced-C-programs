@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 #define max 20
- 
 int top = -1, front = 0;
 int a[max],b[max];
 void push()
