@@ -1,2 +1,2 @@
 # Stack-Operations
-Use stacks to solve complex problems
+Use C programs to learn and implement advanced algorithms
